@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Blosum",
+  "description": "GPT for bloggers",
+  "version": "1.0",
+  "action": {
+    "default_popup": "/popup/popup.html",
+    "default_icon": "/images/logo.png"
+  },
+  "permissions" : [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["/popup/style.css"],
+      "js" : ["/popup/popup.js"]
+    }
+  ]
+}

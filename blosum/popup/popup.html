@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blosum</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <div id="up_area">
+        <div class="tap-container">
+          <img class="icon-logo" src="../images/logo.png" alt="logo">
+          <input type="image" src="../images/trash-icon.png" id="trash_icon" alt="trash icon" class="icon-util">
+        </div>
+        <div class="tap-container">
+          <img class="icon-line" src="../images/header-line.png" style="float:center" alt="line"> 
+        </div>
+
+        <!-- image size check -->
+        <div class="header-container">IMAGE SIZE</div>
+        <form name="img_size_option">
+          <div class="input-container">
+            <input type="checkbox" value="256" class="btn-check" id="chk_img256" checked>
+            <label class="btn btn-default btn-check-size" for="chk_img256">256</label>
+      
+            <input type="checkbox" value="512" class="btn-check" id="chk_img512">
+            <label class="btn btn-default btn-check-size" for="chk_img512">512</label>
+            
+            <input type="checkbox" value="1024" class="btn-check" id="chk_img1024">
+            <label class="btn btn-default btn-check-size" for="chk_img1024">1024</label>
+          </div>
+        </form>
+
+        <!-- image style check -->
+        <div class="header-container">IMAGE STYLE</div>
+        <form name="img_style_option">
+          <div class="input-container">
+              <input type="checkbox" value="realistic" class="btn-check"  id="chk_realistic">
+              <label class="btn btn-default btn-check-size" for="chk_realistic">Realistic</label>
+              <input type="checkbox" value="painting" class="btn-check" id="chk_painting">
+              <label class="btn btn-default btn-check-size" for="chk_painting">Painting</label>
+              <input type="checkbox" value="abstract" class="btn-check" id="chk_abstract">
+              <label class="btn btn-default btn-check-size" for="chk_abstract">Abstract</label>
+          </div>
+          <div class="input-container">
+            <input type="checkbox" value="fantasy" class="btn-check" id="chk_fantasy" >
+            <label class="btn btn-default btn-check-size" for="chk_fantasy">Fantasy</label>
+            <input type="checkbox" value="anime" class="btn-check" id="chk_anime">
+            <label class="btn btn-default btn-check-size" for="chk_anime">Anime</label>
+            <input type="checkbox" value="futuristic" class="btn-check" id="chk_futuristic">
+            <label class="btn btn-default btn-check-size" for="chk_futuristic">Futuristic</label>
+          </div>    
+          <div class="input-container">
+            <input type="checkbox" value="vintage" class="btn-check" id="chk_vintage">
+            <label class="btn btn-default btn-check-size" for="chk_vintage">Vintage</label>
+            <input type="checkbox" value="colorful" class="btn-check" id="chk_colorful">
+            <label class="btn btn-default btn-check-size" for="chk_colorful">Colorful</label>            
+            <input type="checkbox" value="gray" class="btn-check" id="chk_gray">
+            <label class="btn btn-default btn-check-size" for="chk_gray">Gray</label>
+          </div>     
+        </form> 
+
+        <!-- content -->
+        <div class="header-container">Content</div>
+        <textarea class="input-container" id="prompt_box" placeholder="글을 작성하거나 붙여넣기를 해주세요." maxlength="300" style="height: 80px;"></textarea>
+        <div id="text_cnt">(0 / 300)</div>
+
+        <!-- generate -->
+        <div class="input-container">
+          <button class="btn btn-default btn-submit-size" id="btn_generate_img">BLOW SOME IMAGES!</button>
+          <div class="layerPopup">
+            <div class="spinner"></div>
+        </div>
+        </div>        
+      </div>
+
+      <div id="down-area">
+        <!-- show generated images -->
+        <div class="img-grid-container" id="img_display"></div>
+      
+        <!-- re-generate button -->
+        <div class="input-container" id="btn_re_generate_img"></div>
+      </div>
+    
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
